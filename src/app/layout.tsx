@@ -16,14 +16,20 @@ const theme = createTheme({
 export default function RootLayout({ children }: { children: ReactNode }) {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://unpkg.com/blip-chat-widget';
+    script.src = 'https://unpkg.com/blip-chat-widget@1.11.*';
+    script.type = 'text/javascript';
     script.async = true;
     script.onload = () => {
       if (window.BlipChat) {
-        new window.BlipChat()
+        const blipClient = new window.BlipChat();
+        blipClient
           .withAppKey('cG9ydGlmb2xpbzg6NjRlYmI3NTYtMTc5Yy00MmIwLWFmZjQtYzM4NGQ3NTFkNzNm')
-          .withButton({ color: '#333', icon: 'https://blipmediastore.blip.ai/public-medias/Media_a4a37081-2224-47b6-94cf-5aff5fa9cfd2' })
-          .withCustomCommonUrl('https://elias-junio-bqqie.chat.blip.ai/')
+          .withEventHandler(window.BlipChat.LOAD_EVENT, function () {
+            blipClient.sendMessage({
+              type: 'text/plain',
+              content: 'This is my first message',
+            });
+          })
           .build();
       }
     };
