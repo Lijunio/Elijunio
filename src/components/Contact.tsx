@@ -1,9 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 import emailjs from 'emailjs-com';
 
 export default function Contact() {
-  const form = useRef<HTMLFormElement>(null);
+  const [name, setName] = useState('');
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value.toUpperCase());
+  };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,6 +47,8 @@ export default function Contact() {
             fullWidth
             margin="normal"
             required
+            value={name}
+            onChange={handleNameChange}
             InputLabelProps={{ style: { color: 'white' } }}
             InputProps={{ style: { color: 'white' } }}
             variant="filled"
@@ -81,8 +87,8 @@ export default function Contact() {
                 display: 'flex',
                 justifyContent: 'center',
                 border: '2px solid transparent',
-                borderRadius: '10px',  // Tornando o botão retangular
-                p: '8px 24px',          // Ajuste do padding para torná-lo mais retangular
+                borderRadius: '10px',  
+                p: '8px 24px',          
                 bgcolor: '#4b5563',
                 backdropFilter: 'blur(10px)',
                 color: 'white',
