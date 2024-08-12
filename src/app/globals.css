@@ -85,3 +85,47 @@ html {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+
+/*CHATBOT*/
+#blip-chat-open-iframe {
+    bottom: 0 !important;
+    top: auto !important;
+    position: relative !important;
+    display: block !important; 
+    opacity: 1 !important; 
+    transition: opacity 1s ease-in-out !important; 
+}
+
+#blip-chat-open-iframe.blip-chat-visible {
+    animation: shake 1s infinite !important; 
+}
+
+#blip-chat-open-iframe.blip-chat-visible::before {
+    content: "Olá!\A Caso queira conversar comigo clique aqui." !important;
+    position: absolute !important;
+    display: block !important; 
+    top: -50px !important;
+    left: -100px !important;
+    padding: 6px !important;
+    background-color: #333 !important;
+    color: white !important;
+    border-radius: 0.8125em 0.8125em 0.125em 0.8125em !important;
+    white-space: pre-line !important;
+    transform: translateX(-50%) !important;
+    width: 200px !important;
+    z-index: 1000 !important;
+}
+
+.blip-chat-clicked::before {
+    display: none !important; 
+}
+
+@keyframes shake {
+   0%, 100% {
+       transform: translateX(0) !important;
+   }
+   50% {
+       transform: translateX(-10px) !important;
+   }
+}
