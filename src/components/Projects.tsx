@@ -63,7 +63,7 @@ export default function Projects() {
       image: '/images/descomplica.png',
       link: 'https://ibb.co/3YVTSVb',
       progress: 40,
-      icons: [' /images/icons/html5.png', '/images/icons/css.png', '/images/icons/react.png', '/images/icons/php.png'] 
+      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/react.png', '/images/icons/php.png'] 
     },
   ];
 

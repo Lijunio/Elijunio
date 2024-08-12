@@ -21,7 +21,7 @@ const About: FC = () => {
           <div className="p-6 rounded-lg shadow-lg gradient-bg">
             <h4 className="text-xl font-semibold text-white mb-2 text-center">Avançado</h4>
             <p className="text-gray-300 text-center">
-              HTML5, CSS3, JavaScript, React, RESTful APIs, GraphQL, PL/SQL, T-SQL, PostgreSQL, MySQL.
+              HTML5, CSS3, JavaScript, React, RESTful APIs, GraphQL, PL/SQL, T-SQL, Postgres, MySQL.
             </p>
           </div>
           <div className="p-6 rounded-lg shadow-lg gradient-bg">
