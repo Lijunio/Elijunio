@@ -34,6 +34,22 @@ export default function Projects() {
 
   const projects = [
     {
+      title: 'Portfólio Novo',
+      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
+      image: '/images/logo.gif',
+      link: 'https://elijunio.vercel.app/',
+      progress: 100,
+      icons: ['/images/icons/react.png', '/images/icons/css.png', '/images/icons/js.png' ] 
+    },
+    {
+      title: 'Portfólio Antigo',
+      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
+      image: '/images/logo.gif',
+      link: 'https://lijunio.github.io/portfolio/',
+      progress: 100,
+      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
+    },
+    {
       title: 'Amigo Oculto Natal Família Souza',
       description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
       image: '/images/natal.png',
@@ -55,7 +71,7 @@ export default function Projects() {
       image: '/images/lar-dos-fita.png',
       link: 'https://lijunio.github.io/Lar-dos-Fita/',
       progress: 100,
-      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/vue-js.svg'] 
+      icons: ['/images/icons/vue-js.svg', '/images/icons/html5.png', '/images/icons/js.png'] 
     },
     {
       title: 'Descomplica Consultoria Acadêmica',
@@ -101,9 +117,9 @@ export default function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={500}  // Substitua pela largura da imagem real
-                  height={300} // Substitua pela altura da imagem real
-                  layout="responsive"  // Ajusta a imagem responsivamente
+                  width={500}  
+                  height={300} 
+                  layout="responsive"  
                 />
               </a>
               <ExpandableCardContent className={expandedCard === index ? 'expanded' : ''}>
