@@ -1,7 +1,7 @@
 'use client';
 
 import './globals.css';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -14,6 +14,26 @@ const theme = createTheme({
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/blip-chat-widget';
+    script.async = true;
+    script.onload = () => {
+      if (window.BlipChat) {
+        new window.BlipChat()
+          .withAppKey('cG9ydGlmb2xpbzg6NjRlYmI3NTYtMTc5Yy00MmIwLWFmZjQtYzM4NGQ3NTFkNzNm')
+          .withButton({ color: '#333', icon: 'https://blipmediastore.blip.ai/public-medias/Media_a4a37081-2224-47b6-94cf-5aff5fa9cfd2' })
+          .withCustomCommonUrl('https://elias-junio-bqqie.chat.blip.ai/')
+          .build();
+      }
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -24,23 +44,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <CssBaseline />
           {children}
         </ThemeProvider>
-        {/* Adiciona o script do Blip Chat conforme a documentação */}
-        <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                window.onload = function () {
-                    new BlipChat()
-                        .withAppKey('cG9ydGlmb2xpbzg6NjRlYmI3NTYtMTc5Yy00MmIwLWFmZjQtYzM4NGQ3NTFkNzNm')
-                        .withButton({"color":"#333","icon":"https://blipmediastore.blip.ai/public-medias/Media_a4a37081-2224-47b6-94cf-5aff5fa9cfd2"})
-                        .withCustomCommonUrl('https://elias-junio-bqqie.chat.blip.ai/')
-                        .build();
-                }
-              })();
-            `,
-          }}
-        />
       </body>
     </html>
   );
