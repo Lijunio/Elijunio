@@ -1,6 +1,7 @@
 import { Card, CardContent, Typography, Grid, CardMedia, Box, LinearProgress } from '@mui/material';
 import { useState } from 'react';
 import { styled } from '@mui/system';
+import Image from 'next/image'; // Importando o componente Image
 
 const ExpandableCardContent = styled(CardContent)(({ theme }) => ({
   transition: 'max-height 0.3s ease-out',
@@ -91,11 +92,12 @@ export default function Projects() {
               }}
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <CardMedia
-                  component="img"
-                  image={project.image}
+                <Image
+                  src={project.image}
                   alt={project.title}
-                  height="100"
+                  width={500}  // Substitua pela largura da imagem real
+                  height={300} // Substitua pela altura da imagem real
+                  layout="responsive"  // Ajusta a imagem responsivamente
                 />
               </a>
               <ExpandableCardContent className={expandedCard === index ? 'expanded' : ''}>
@@ -121,7 +123,7 @@ export default function Projects() {
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mt: 1 }}>
                   {project.icons.map((icon, iconIndex) => (
-                    <img key={iconIndex} src={icon} alt="icon" style={{ width: '24px', height: '24px' }} />
+                    <Image key={iconIndex} src={icon} alt="icon" width={24} height={24} />
                   ))}
                 </Box>
               </Box>

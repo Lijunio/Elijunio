@@ -40,11 +40,12 @@ export default function Contact() {
         }}
       >
         <Typography variant="body1" gutterBottom sx={{ fontSize: '1.25rem' }}>
-            Entre em contato comigo enviando uma mensagem usando o formulário abaixo.
+          Entre em contato comigo enviando uma mensagem usando o formulário abaixo.
         </Typography>
         <form ref={form} onSubmit={sendEmail} id="contact-form">
           <TextField
             label="Nome"
+            name="name"  
             fullWidth
             margin="normal"
             required
@@ -55,6 +56,7 @@ export default function Contact() {
           />
           <TextField
             label="Email"
+            name="email"  
             fullWidth
             margin="normal"
             required
@@ -66,6 +68,7 @@ export default function Contact() {
           />
           <TextField
             label="Mensagem"
+            name="message"  
             fullWidth
             margin="normal"
             required
