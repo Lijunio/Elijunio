@@ -34,7 +34,7 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'Portfólio Novo',
+      title: 'Portfólio 2.0',
       description: 'Criei este portfólio para reunir e compartilhar meus projetos, destacando minha evolução como desenvolvedor ao adotar linguagens e tecnologias mais modernas. Decidi migrar para novas linguagens como parte do meu aprendizado contínuo, buscando sempre estar atualizado e entregar soluções inovadoras. Este portfólio reflete minha paixão pela tecnologia, meu compromisso com a excelência e minha capacidade de adaptação às mudanças do mercado.',
       image: '/images/logo.gif',
       link: 'https://elijunio.vercel.app/',
@@ -58,9 +58,9 @@ export default function Projects() {
       icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' , '/images/icons/python.png', '/images/icons/nodejs.png' , '/images/icons/mysql.png' ] 
     },
     {
-      title: 'Portfólio Antigo',
+      title: 'Portfólio 1.0',
       description: 'Criei este portfólio para reunir e compartilhar meus projetos, habilidades como desenvolvedor. Ele reflete minha paixão pela tecnologia e meu compromisso com a excelência, servindo como uma vitrine do meu trabalho e da minha trajetória profissional',
-      image: '/images/logo.gif',
+      image: '/images/portfolio.png',
       link: 'https://lijunio.github.io/portfolio/',
       progress: 100,
       icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
