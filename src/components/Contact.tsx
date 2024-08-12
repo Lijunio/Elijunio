@@ -7,6 +7,7 @@ export default function Contact() {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("Formulário submetido");
 
     if (form.current) {
       emailjs.sendForm('service_t4yqi45', 'template_z967x3u', form.current, '922JgcvAEBKtkOd3Y')
