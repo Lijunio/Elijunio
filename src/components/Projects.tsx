@@ -34,36 +34,12 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'Portfólio Novo',
-      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
+      title: 'Portfólio 2.0',
+      description: 'Criei este portfólio para reunir e compartilhar meus projetos, destacando minha evolução como desenvolvedor ao adotar linguagens e tecnologias mais modernas. Decidi migrar para novas linguagens como parte do meu aprendizado contínuo, buscando sempre estar atualizado e entregar soluções inovadoras. Este portfólio reflete minha paixão pela tecnologia, meu compromisso com a excelência e minha capacidade de adaptação às mudanças do mercado.',
       image: '/images/logo.gif',
       link: 'https://elijunio.vercel.app/',
       progress: 100,
       icons: ['/images/icons/react.png', '/images/icons/css.png', '/images/icons/js.png' ] 
-    },
-    {
-      title: 'Portfólio Antigo',
-      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
-      image: '/images/logo.gif',
-      link: 'https://lijunio.github.io/portfolio/',
-      progress: 100,
-      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
-    },
-    {
-      title: 'Amigo Oculto Natal Família Souza',
-      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
-      image: '/images/natal.png',
-      link: 'https://lijunio.github.io/Amigo-Oculto-2023/',
-      progress: 100,
-      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
-    },
-    {
-      title: 'Bioguard',
-      description: 'O projeto BioGuard, desenvolvido como trabalho para um dos semestres da faculdade, integra um sistema de registro de ponto com um leitor de biometria, oferecendo uma solução completa para o gerenciamento de funcionários. O sistema abrange funcionalidades como criação e consulta de registros de ponto, além da gestão de funcionários e departamentos. A interface é intuitiva e responsiva, projetada para ser amigável e eficiente, garantindo segurança e precisão no controle de acesso. A página de login diferencia entre funcionários e gerentes, redirecionando cada um para funcionalidades específicas.',
-      image: '/images/bioguard.png',
-      link: 'https://lijunio.github.io/bioguard/',
-      progress: 100,
-      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' , '/images/icons/python.png', '/images/icons/nodejs.png' , '/images/icons/mysql.png' ] 
     },
     {
       title: 'Lar dos Fitas',
@@ -74,6 +50,22 @@ export default function Projects() {
       icons: ['/images/icons/vue-js.svg', '/images/icons/html5.png', '/images/icons/js.png'] 
     },
     {
+      title: 'Bioguard',
+      description: 'O projeto BioGuard, desenvolvido como trabalho para um dos semestres da faculdade, integra um sistema de registro de ponto com um leitor de biometria, oferecendo uma solução completa para o gerenciamento de funcionários. O sistema abrange funcionalidades como criação e consulta de registros de ponto, além da gestão de funcionários e departamentos. A interface é intuitiva e responsiva, projetada para ser amigável e eficiente, garantindo segurança e precisão no controle de acesso. A página de login diferencia entre funcionários e gerentes, redirecionando cada um para funcionalidades específicas.',
+      image: '/images/bioguard.png',
+      link: 'https://lijunio.github.io/bioguard/',
+      progress: 100,
+      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' , '/images/icons/python.png', '/images/icons/nodejs.png' , '/images/icons/mysql.png' ] 
+    },
+    {
+      title: 'Portfólio 1.0',
+      description: 'Criei este portfólio para reunir e compartilhar meus projetos, habilidades como desenvolvedor. Ele reflete minha paixão pela tecnologia e meu compromisso com a excelência, servindo como uma vitrine do meu trabalho e da minha trajetória profissional',
+      image: '/images/logo.gif',
+      link: 'https://lijunio.github.io/portfolio/',
+      progress: 100,
+      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
+    },
+    {
       title: 'Descomplica Consultoria Acadêmica',
       description: 'Este website de consultoria acadêmica está sendo desenvolvido com o objetivo de proporcionar uma experiência fluida e interativa aos usuários, permitindo que explorem uma variedade de serviços acadêmicos oferecidos. O projeto inclui funcionalidades que permitirão a solicitação de orçamentos por meio de formulários e a conexão direta com o e-mail do consultor. Além disso, está sendo planejada a integração de uma API que conectará diretamente com o WhatsApp do consultor, facilitando a comunicação e a resolução de dúvidas.',
       image: '/images/descomplica.png',
@@ -81,6 +73,14 @@ export default function Projects() {
       progress: 40,
       icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/react.png', '/images/icons/php.png'] 
     },
+    {
+      title: 'Amigo Oculto Natal Família Souza',
+      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
+      image: '/images/natal.png',
+      link: 'https://lijunio.github.io/Amigo-Oculto-2023/',
+      progress: 100,
+      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
+    }
   ];
 
   const handleExpandClick = (index: number) => {
