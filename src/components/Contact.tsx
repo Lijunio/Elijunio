@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 import emailjs from 'emailjs-com';
 
 export default function Contact() {
-  const [name, setName] = useState('');
-
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value.toUpperCase());
-  };
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,18 +38,25 @@ export default function Contact() {
             Entre em contato comigo enviando uma mensagem usando o formulário abaixo.
         </Typography>
         <form id="contact-form">
-          <TextField
-            label="Nome"
-            fullWidth
-            margin="normal"
-            required
-            value={name}
-            onChange={handleNameChange}
-            InputLabelProps={{ style: { color: 'white' } }}
-            InputProps={{ style: { color: 'white' } }}
-            variant="filled"
-            sx={{ bgcolor: 'rgba(255, 255, 255, 0.1)', borderRadius: 1 }}
-          />
+        <TextField
+  label="Nome"
+  fullWidth
+  margin="normal"
+  required
+  InputLabelProps={{ style: { color: 'white' } }}
+  InputProps={{
+    style: { color: 'white' },
+    inputProps: {
+      style: { textTransform: 'uppercase' },
+      onInput: (e: React.ChangeEvent<HTMLInputElement>) => {
+        e.target.value = e.target.value.toUpperCase();
+      }
+    }
+  }}
+  variant="filled"
+  sx={{ bgcolor: 'rgba(255, 255, 255, 0.1)', borderRadius: 1 }}
+/>
+
           <TextField
             label="Email"
             fullWidth
