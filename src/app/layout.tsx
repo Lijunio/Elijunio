@@ -15,7 +15,7 @@ const theme = createTheme({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   useEffect(() => {
-    // Defina a largura mínima para mostrar o chatbot
+    //largura mínima para mostrar o chatbot
     const minWidthForChatbot = 768;
 
     if (window.innerWidth > minWidthForChatbot) {
