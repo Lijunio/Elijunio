@@ -24,7 +24,7 @@ const Footer: FC = () => {
         </IconButton>
         <IconButton
           sx={{ color: 'white' }}
-          href="https://github.com/your-github-username" // Coloque o link do GitHub aqui
+          href="https://github.com/Lijunio" 
           target="_blank"
           rel="noopener noreferrer"
         >
