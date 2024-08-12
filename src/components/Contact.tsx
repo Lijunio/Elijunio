@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) {
+      console.error("Formulário não encontrado.");
+      return;
+    }
+
+    emailjs.sendForm('service_t4yqi45', 'template_z967x3u', form.current, '922JgcvAEBKtkOd3Y')
+      .then((result) => {
+        console.log("Mensagem enviada com sucesso:", result.text);
+        alert('Mensagem enviada com sucesso!');
+        form.current!.reset();
+      }, (error) => {
+        console.error("Erro ao enviar mensagem:", error.text);
+        alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
+      });
+  };
+
   return (
     <Box sx={{ textAlign: 'center', mb: 8 }}>
       <h3 className="text-4xl font-bold text-white mb-12 text-center text-animation mt-16">
@@ -20,7 +42,7 @@ export default function Contact() {
         <Typography variant="body1" gutterBottom sx={{ fontSize: '1.25rem' }}>
             Entre em contato comigo enviando uma mensagem usando o formulário abaixo.
         </Typography>
-        <form id="contact-form">
+        <form ref={form} onSubmit={sendEmail} id="contact-form">
           <TextField
             label="Nome"
             fullWidth

@@ -17,36 +17,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Adiciona o script do Blip Chat aqui */}
         <script src="https://unpkg.com/blip-chat-widget" async></script>
-        <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js" async></script>
       </head>
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           {children}
         </ThemeProvider>
+        {/* Código do Blip Chatbot */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                emailjs.init("922JgcvAEBKtkOd3Y");
-
-                document.addEventListener('DOMContentLoaded', function() {
-                  var form = document.getElementById('contact-form');
-                  if (form) {
-                    form.addEventListener('submit', function(event) {
-                      event.preventDefault();
-                      emailjs.sendForm('service_t4yqi45', 'template_z967x3u', form)
-                        .then(function() {
-                          alert('Mensagem enviada com sucesso!');
-                          form.reset();
-                        }, function(error) {
-                          alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
-                        });
-                    });
-                  }
-                });
-
                 var minWidthForChatbot = 768;
                 if (window.innerWidth > minWidthForChatbot) {
                   window.onload = function () {
