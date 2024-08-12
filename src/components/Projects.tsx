@@ -1,7 +1,7 @@
-import { Card, CardContent, Typography, Grid, CardMedia, Box, LinearProgress } from '@mui/material';
+import { Card, CardContent, Typography, Grid, Box, LinearProgress } from '@mui/material';
 import { useState } from 'react';
 import { styled } from '@mui/system';
-import Image from 'next/image'; // Importando o componente Image
+import Image from 'next/image';
 
 const ExpandableCardContent = styled(CardContent)(({ theme }) => ({
   transition: 'max-height 0.3s ease-out',
@@ -12,9 +12,15 @@ const ExpandableCardContent = styled(CardContent)(({ theme }) => ({
     maxHeight: '500px',
   },
   color: 'white',
+  [theme.breakpoints.down('sm')]: {
+    maxHeight: 'none',
+    '&.expanded': {
+      maxHeight: 'none',
+    },
+  },
 }));
 
-const CustomLinearProgress = styled(LinearProgress)(({ theme, value }) => ({
+const CustomLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 15,
   borderRadius: 5,
   backgroundColor: 'rgba(255, 255, 255, 0.3)',
@@ -104,9 +110,11 @@ export default function Projects() {
                 <Typography variant="h6" component="div" gutterBottom>
                   {project.title}
                 </Typography>
-                <Typography variant="body2" sx={{ color: 'white', textAlign: 'justify' }}>
-                  {project.description}
-                </Typography>
+                {expandedCard === index && (
+                  <Typography variant="body2" sx={{ color: 'white', textAlign: 'justify' }}>
+                    {project.description}
+                  </Typography>
+                )}
               </ExpandableCardContent>
               <Box sx={{ padding: '0 16px 16px' }}>
                 <CustomLinearProgress variant="determinate" value={project.progress} />
