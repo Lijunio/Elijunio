@@ -1,4 +1,4 @@
-'use client'; // Isso garante que o código será executado no lado do cliente
+'use client'; 
 
 import { Container, CssBaseline } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';

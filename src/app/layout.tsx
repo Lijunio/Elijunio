@@ -4,6 +4,7 @@ import './globals.css';
 import { ReactNode, useEffect } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Head from 'next/head'; // Importando o componente Head do Next.js
 
 const theme = createTheme({
   palette: {
@@ -15,7 +16,7 @@ const theme = createTheme({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   useEffect(() => {
-    //largura mínima para mostrar o chatbot
+    // largura mínima para mostrar o chatbot
     const minWidthForChatbot = 768;
 
     if (window.innerWidth > minWidthForChatbot) {
@@ -62,7 +63,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Outros elementos de head, como meta tags, links, etc. */}
+        <Head>
+          <title>Meu Novo Título da Página</title> {/* Aqui você define o título da página */}
+          <meta name="description" content="Descrição da minha página" /> {/* Adicionando uma meta descrição */}
+          <link rel="icon" href="/favicon.ico" /> {/* Opcional: Favicon */}
+        </Head>
       </head>
       <body>
         <ThemeProvider theme={theme}>
