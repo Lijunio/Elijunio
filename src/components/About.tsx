@@ -33,11 +33,11 @@ const About: FC = () => {
             </p>
           </div>
           <div className="p-6 rounded-lg shadow-lg gradient-bg">        
-            <p className="text-gray-300 text-left mt-4">
+            <p className="text-gray-300 text-left">
               <strong className="text-white">Banco de Dados:</strong><br />
               Oracle, MS SQL Server, PL/SQL, T-SQL, Postgres
             </p>
-            <p className="text-gray-300 text-left">
+            <p className="text-gray-300 text-left mt-4">
               <strong className="text-white">APIs:</strong><br />
               RESTful
             </p>
