@@ -14,26 +14,36 @@ const About: FC = () => {
 
       {/* Seção de Skills */}
       <section className="w-full max-w-6xl px-4">
-      <h3 className="text-4xl font-bold text-white mb-12 text-center text-animation mt-16">
+        <h3 className="text-4xl font-bold text-white mb-12 text-center text-animation mt-16">
           SKILLS
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           <div className="p-6 rounded-lg shadow-lg gradient-bg">
-            <h4 className="text-xl font-semibold text-white mb-2 text-center">Avançado</h4>
-            <p className="text-gray-300 text-center">
-              HTML5, CSS3, JavaScript, React, RESTful APIs, GraphQL, PL/SQL, T-SQL, Postgres, MySQL.
+            <p className="text-gray-300 text-left">
+              <strong className="text-white">Linguagens de Programação:</strong><br />
+              HTML5, CSS3, JavaScript, TypeScript, Python, Node.js
+            </p>
+            <p className="text-gray-300 text-left mt-4">
+              <strong className="text-white">Frameworks e Bibliotecas:</strong><br />
+              React, Next.js, Vue.js
+            </p>
+            <p className="text-gray-300 text-left mt-4">
+              <strong className="text-white">Versionamento:</strong><br />
+              Git – GitHub
             </p>
           </div>
-          <div className="p-6 rounded-lg shadow-lg gradient-bg">
-            <h4 className="text-xl font-semibold text-white mb-2 text-center">Intermediário</h4>
-            <p className="text-gray-300 text-center">
-              Python, Vue, Java, Node.js, MariaDB, Oracle.
+          <div className="p-6 rounded-lg shadow-lg gradient-bg">        
+            <p className="text-gray-300 text-left mt-4">
+              <strong className="text-white">Banco de Dados:</strong><br />
+              Oracle, MS SQL Server, PL/SQL, T-SQL, Postgres
             </p>
-          </div>
-          <div className="p-6 rounded-lg shadow-lg gradient-bg">
-            <h4 className="text-xl font-semibold text-white mb-2 text-center">Iniciante</h4>
-            <p className="text-gray-300 text-center">
-              AngularJS, Kotlin, AWS, Amazon EC2, MongoDB.
+            <p className="text-gray-300 text-left">
+              <strong className="text-white">APIs:</strong><br />
+              RESTful
+            </p>
+            <p className="text-gray-300 text-left mt-4">
+              <strong className="text-white">Metodologias Ágeis:</strong><br />
+              Scrum, Kanban
             </p>
           </div>
         </div>

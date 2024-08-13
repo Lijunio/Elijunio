@@ -58,20 +58,20 @@ export default function Projects() {
       icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' , '/images/icons/python.png', '/images/icons/nodejs.png' , '/images/icons/mysql.png' ] 
     },
     {
-      title: 'Portfólio 1.0',
-      description: 'Criei este portfólio para reunir e compartilhar meus projetos, habilidades como desenvolvedor. Ele reflete minha paixão pela tecnologia e meu compromisso com a excelência, servindo como uma vitrine do meu trabalho e da minha trajetória profissional',
-      image: '/images/portfolio.png',
-      link: 'https://lijunio.github.io/portfolio/',
-      progress: 100,
-      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
-    },
-    {
       title: 'Descomplica Consultoria Acadêmica',
       description: 'Este website de consultoria acadêmica está sendo desenvolvido com o objetivo de proporcionar uma experiência fluida e interativa aos usuários, permitindo que explorem uma variedade de serviços acadêmicos oferecidos. O projeto inclui funcionalidades que permitirão a solicitação de orçamentos por meio de formulários e a conexão direta com o e-mail do consultor. Além disso, está sendo planejada a integração de uma API que conectará diretamente com o WhatsApp do consultor, facilitando a comunicação e a resolução de dúvidas.',
       image: '/images/descomplica.png',
       link: 'https://ibb.co/3YVTSVb',
       progress: 40,
       icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/react.png', '/images/icons/php.png'] 
+    },
+    {
+      title: 'Portfólio 1.0',
+      description: 'Criei este portfólio para reunir e compartilhar meus projetos, habilidades como desenvolvedor. Ele reflete minha paixão pela tecnologia e meu compromisso com a excelência, servindo como uma vitrine do meu trabalho e da minha trajetória profissional',
+      image: '/images/portfolio.png',
+      link: 'https://lijunio.github.io/portfolio/',
+      progress: 100,
+      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' ] 
     },
     {
       title: 'Amigo Oculto Natal Família Souza',
