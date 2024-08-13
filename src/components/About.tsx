@@ -7,11 +7,10 @@ const About: FC = () => {
         <h2 className="text-center text-[40px] md:text-5xl lg:text-6xl">
           <span className="text-white">Bem vindo ao</span> <span className="text-blue-500">meu portfólio</span>
         </h2>
-        <p className="text-center md:tracking-wider mb-12 text-sm md:text-lg lg:text-2xl mt-4 text-white">
-          Olá! Eu sou Elias, um Analista de Desenvolvimento de Sistemas.
+        <p className="text-center md:tracking-wider mb-12 text-lg md:text-xl lg:text-3xl mt-4 text-white">
+       Olá! Eu sou Elias, um Analista de Desenvolvimento de Sistemas.
         </p>
       </div>
-
       {/* Seção de Skills */}
       <section className="w-full max-w-6xl px-4">
         <h3 className="text-4xl font-bold text-white mb-12 text-center text-animation mt-16">
