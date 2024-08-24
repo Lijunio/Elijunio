@@ -25,7 +25,7 @@ const CustomLinearProgress = styled(LinearProgress)(({ theme }) => ({
   borderRadius: 5,
   backgroundColor: 'rgba(255, 255, 255, 0.3)',
   '& .MuiLinearProgress-bar': {
-    background: #333,
+    background: `#333`,
   },
 }));
 
