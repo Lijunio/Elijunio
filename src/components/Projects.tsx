@@ -25,7 +25,7 @@ const CustomLinearProgress = styled(LinearProgress)(({ theme }) => ({
   borderRadius: 5,
   backgroundColor: 'rgba(255, 255, 255, 0.3)',
   '& .MuiLinearProgress-bar': {
-    background: `#333`,
+    background: #333,
   },
 }));
 
@@ -35,7 +35,7 @@ export default function Projects() {
   const projects = [
     {
       title: 'Portfólio 2.0',
-      description: 'Criei este portfólio para reunir e compartilhar meus projetos, destacando minha evolução como desenvolvedor ao adotar linguagens e tecnologias mais modernas...',
+      description: 'Criei este portfólio para reunir e compartilhar meus projetos, destacando minha evolução como desenvolvedor ao adotar linguagens e tecnologias mais modernas. Decidi migrar para novas linguagens como parte do meu aprendizado contínuo, buscando sempre estar atualizado e entregar soluções inovadoras. Este portfólio reflete minha paixão pela tecnologia, meu compromisso com a excelência e minha capacidade de adaptação às mudanças do mercado.',
       image: '/images/logo.gif',
       link: 'https://elijunio.vercel.app/',
       progress: 100,
@@ -87,10 +87,6 @@ export default function Projects() {
     setExpandedCard(expandedCard === index ? null : index);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <Box sx={{ textAlign: 'center', mb: 8 }}>
       <h3 className="text-4xl font-bold text-white mb-12 text-center text-animation mt-8">
@@ -116,16 +112,17 @@ export default function Projects() {
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', 
                 },
               }}
-              onClick={scrollToTop} // Adicionado aqui
             >
-              <Box sx={{ width: '100%', height: 300, position: 'relative' }}>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </Box>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <Box sx={{ width: '100%', height: 300, position: 'relative' }}>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </Box>
+              </a>
               <ExpandableCardContent className={expandedCard === index ? 'expanded' : ''}>
                 <Typography variant="h6" component="div" gutterBottom>
                   {project.title}
