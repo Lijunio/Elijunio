@@ -37,17 +37,18 @@ export default function Projects() {
       title: 'Portfólio 2.0',
       description: 'Criei este portfólio para reunir e compartilhar meus projetos, destacando minha evolução como desenvolvedor ao adotar linguagens e tecnologias mais modernas. Decidi migrar para novas linguagens como parte do meu aprendizado contínuo, buscando sempre estar atualizado e entregar soluções inovadoras. Este portfólio reflete minha paixão pela tecnologia, meu compromisso com a excelência e minha capacidade de adaptação às mudanças do mercado.',
       image: '/images/logo.gif',
-      link: 'https://elijunio.vercel.app/',
+      onClick: () => scrollToSection('about'), 
       progress: 100,
-      icons: ['/images/icons/react.png', '/images/icons/css.png', '/images/icons/js.png' ] 
+      icons: ['/images/icons/react.png', '/images/icons/css.png', '/images/icons/js.png']
     },
     {
       title: 'Lar dos Fitas',
-      description: 'O projeto Lar dos Fitas foi criado como uma forma de diversão e interação com os convidados, organizando tarefas e atividades de maneira simples e prática. Inspirado pela nova experiência de morar em uma casa com sua namorada, Danielle, o projeto foi desenvolvido com o objetivo de explorar e praticar novas habilidades tecnológicas. A escolha da tecnologia utilizada se deu pela sua flexibilidade e facilidade de uso, o que tornou o desenvolvimento da plataforma uma experiência agradável e eficaz.',
+      description: 'O projeto Lar dos Fitas foi criado como uma forma de diversão...',
       image: '/images/lar-dos-fita.png',
       link: 'https://lijunio.github.io/Lar-dos-Fita/',
       progress: 100,
-      icons: ['/images/icons/vue-js.svg', '/images/icons/html5.png', '/images/icons/js.png'] 
+      icons: ['/images/icons/vue-js.svg', '/images/icons/html5.png', '/images/icons/js.png'],
+      requiresPassword: true 
     },
     {
       title: 'Bioguard',
@@ -87,6 +88,25 @@ export default function Projects() {
     setExpandedCard(expandedCard === index ? null : index);
   };
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, project: any) => {
+    if (project.requiresPassword) {
+      event.preventDefault();
+      const password = prompt('Por favor, digite a senha para acessar o projeto:');
+      if (password === 'AcessoLiberado2024#') {
+        window.open(project.link, '_blank');
+      } else {
+        alert('Senha incorreta. Acesso negado.');
+      }
+    }
+  };
+
   return (
     <Box sx={{ textAlign: 'center', mb: 8 }}>
       <h3 className="text-4xl font-bold text-white mb-12 text-center text-animation mt-8">
@@ -107,13 +127,19 @@ export default function Projects() {
                 backgroundColor: 'transparent',
                 transform: 'rotateX(0)',
                 transition: 'transform 0.3s, box-shadow 0.3s',
+                cursor: project.onClick ? 'pointer' : 'default',
                 '&:hover': {
-                  transform: 'scale(1.02)', 
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', 
+                  transform: project.onClick ? 'scale(1.02)' : 'none', 
+                  boxShadow: project.onClick ? '0 4px 20px rgba(0, 0, 0, 0.1)' : 'none',
                 },
               }}
             >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                onClick={(e) => handleLinkClick(e, project)}
+              >
                 <Box sx={{ width: '100%', height: 300, position: 'relative' }}>
                   <Image
                     src={project.image}
