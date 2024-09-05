@@ -37,7 +37,7 @@ export default function Projects() {
       title: 'Portfólio 2.0',
       description: 'Criei este portfólio para reunir e compartilhar meus projetos, destacando minha evolução como desenvolvedor ao adotar linguagens e tecnologias mais modernas. Decidi migrar para novas linguagens como parte do meu aprendizado contínuo, buscando sempre estar atualizado e entregar soluções inovadoras. Este portfólio reflete minha paixão pela tecnologia, meu compromisso com a excelência e minha capacidade de adaptação às mudanças do mercado.',
       image: '/images/logo.gif',
-      onClick: () => scrollToSection('about'), 
+      onClick: () => scrollToSection('about'),
       progress: 100,
       icons: ['/images/icons/react.png', '/images/icons/css.png', '/images/icons/js.png']
     },
@@ -99,6 +99,7 @@ export default function Projects() {
     if (project.requiresPassword) {
       event.preventDefault();
       const password = prompt('Por favor, digite a senha para acessar o projeto:');
+      if (password === null) return; 
       if (password === 'AcessoLiberado2024#') {
         window.open(project.link, '_blank');
       } else {
@@ -133,8 +134,9 @@ export default function Projects() {
                   boxShadow: project.onClick ? '0 4px 20px rgba(0, 0, 0, 0.1)' : 'none',
                 },
               }}
+              onClick={project.onClick}
             >
-              <a 
+                <a 
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer" 

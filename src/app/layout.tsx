@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Outros elementos de head, como meta tags, links, etc. */}
+        {}
       </head>
       <body>
         <ThemeProvider theme={theme}>
