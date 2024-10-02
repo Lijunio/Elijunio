@@ -8,7 +8,7 @@ const About: FC = () => {
           <span className="text-white">Bem vindo ao</span> <span className="text-blue-500">meu portfólio</span>
         </h2>
         <p className="text-center md:tracking-wider mb-12 text-lg md:text-xl lg:text-3xl mt-4 text-white">
-       Olá! Eu sou Elias, um Analista de Desenvolvimento de Sistemas.
+       Olá! Eu sou Elias, um Desenvolvedor de Sistemas.
         </p>
       </div>
       {/* Seção de Skills */}

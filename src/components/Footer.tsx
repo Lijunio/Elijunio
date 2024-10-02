@@ -37,7 +37,7 @@ const Footer: FC = () => {
         &copy; 2024 Elias Ribeiro
       </Typography>
       <Typography variant="body2" gutterBottom sx={{ fontSize: '1.00rem' }}>
-        Ultima atualização 04/09/2024
+        Ultima atualização 02/10/2024
       </Typography>
     </footer>
   );
