@@ -34,6 +34,14 @@ export default function Projects() {
 
   const projects = [
     {
+      title: 'Saneatto Engenharia',
+      description: 'O site da Saneatto Engenharia serve como uma plataforma para apresentar a empresa, seus valores e serviços. Ele tem como principal objetivo fornecer informações sobre a atuação da empresa nas áreas de engenharia geotécnica, fechamento de mina, descomissionamento e sustentabilidade. Além disso, o site facilita o contato com potenciais clientes e parceiros, apresentando os canais de comunicação da empresa e destacando seu compromisso com os Objetivos de Desenvolvimento Sustentável (ODS).',
+      image: '/images/saneatto.png',
+      link: 'https://www.saneatto.com.br/',
+      progress: 100,
+      icons: ['/images/icons/react.png', '/images/icons/css.png', '/images/icons/js.png']
+    },
+    {
       title: 'Portfólio 2.0',
       description: 'Criei este portfólio para reunir e compartilhar meus projetos, destacando minha evolução como desenvolvedor ao adotar linguagens e tecnologias mais modernas. Decidi migrar para novas linguagens como parte do meu aprendizado contínuo, buscando sempre estar atualizado e entregar soluções inovadoras. Este portfólio reflete minha paixão pela tecnologia, meu compromisso com a excelência e minha capacidade de adaptação às mudanças do mercado.',
       image: '/images/logo.gif',
@@ -43,7 +51,7 @@ export default function Projects() {
     },
     {
       title: 'Lar dos Fitas',
-      description: 'O projeto Lar dos Fitas foi criado como uma forma de diversão...',
+      description: 'O projeto Lar dos Fitas foi feito com Vue.js porque eu queria aprender e praticar essa tecnologia. A ideia veio porque estou morando em uma casa nova pela primeira vez com minha namorada, Danielle. O objetivo do projeto é se divertir e interagir com os convidados, organizando tarefas e atividades de forma simples e prática. Vue.js foi a escolha perfeita por ser flexível e fácil de usar, tornando a criação da plataforma bem mais tranquila e divertida.',
       image: '/images/lar-dos-fita.png',
       link: 'https://lijunio.github.io/Lar-dos-Fita/',
       progress: 100,

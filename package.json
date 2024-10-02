@@ -19,7 +19,7 @@
     "autoprefixer": "^10.4.20",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.3.24",
-    "next": "14.2.5",
+    "next": "^14.2.14",
     "portfolio": "file:",
     "react": "^18",
     "react-dom": "^18"
