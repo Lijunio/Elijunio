@@ -35,7 +35,7 @@ export default function Projects() {
   const projects = [
     {
       title: 'Saneatto Engenharia',
-      description: 'O site da Saneatto Engenharia serve como uma plataforma para apresentar a empresa, seus valores e serviços...',
+      description: 'O site da Saneatto Engenharia serve como uma plataforma para apresentar a empresa, seus valores e serviços. Ele tem como principal objetivo fornecer informações sobre a atuação da empresa nas áreas de engenharia geotécnica, fechamento de mina, descomissionamento e sustentabilidade. Além disso, o site facilita o contato com potenciais clientes e parceiros, apresentando os canais de comunicação da empresa e destacando seu compromisso com os Objetivos de Desenvolvimento Sustentável (ODS).',
       image: '/images/saneatto.png',
       link: 'https://www.saneatto.com.br/',
       progress: 100,
@@ -43,7 +43,7 @@ export default function Projects() {
     },
     {
       title: 'Lar dos Fitas',
-      description: 'O projeto Lar dos Fitas foi feito com Vue.js porque eu queria aprender e praticar essa tecnologia...',
+      description: 'Este projeto é uma aplicação Vue.js interativa chamada "Lar dos Fita", que apresenta um card inicial com uma mensagem e uma imagem para melhorar a experiência do usuário, permitindo fechá-lo antes de acessar o conteúdo principal. A página possui um fundo dinâmico com imagem, botões interativos de "Sim" e "Não" que direcionam para diferentes rotas, e reproduz um áudio automaticamente ao interagir com os botões.',
       image: '/images/lar-dos-fita.png',
       link: 'https://lijunio.github.io/Lar-dos-Fita/',
       progress: 100,
@@ -52,7 +52,7 @@ export default function Projects() {
     },
     {
       title: 'Bioguard',
-      description: 'O projeto BioGuard, desenvolvido como trabalho para um dos semestres da faculdade...',
+      description: 'O projeto BioGuard, desenvolvido como trabalho para um dos semestres da faculdade, integra um sistema de registro de ponto com um leitor de biometria, oferecendo uma solução completa para o gerenciamento de funcionários. O sistema abrange funcionalidades como criação e consulta de registros de ponto, além da gestão de funcionários e departamentos. A interface é intuitiva e responsiva, projetada para ser amigável e eficiente, garantindo segurança e precisão no controle de acesso. A página de login diferencia entre funcionários e gerentes, redirecionando cada um para funcionalidades específicas.',
       image: '/images/bioguard.png',
       link: 'https://lijunio.github.io/bioguard/',
       progress: 100,
@@ -60,7 +60,7 @@ export default function Projects() {
     },
     {
       title: 'Descomplica Consultoria Acadêmica',
-      description: 'Este website de consultoria acadêmica está sendo desenvolvido com o objetivo de proporcionar uma experiência fluida...',
+      description: 'Este website de consultoria acadêmica está sendo desenvolvido com o objetivo de proporcionar uma experiência fluida e interativa aos usuários, permitindo que explorem uma variedade de serviços acadêmicos oferecidos. O projeto inclui funcionalidades que permitirão a solicitação de orçamentos por meio de formulários e a conexão direta com o e-mail do consultor. Além disso, está sendo planejada a integração de uma API que conectará diretamente com o WhatsApp do consultor, facilitando a comunicação e a resolução de dúvidas.',
       image: '/images/descomplica.png',
       link: 'https://ibb.co/3YVTSVb',
       progress: 40,
@@ -68,7 +68,7 @@ export default function Projects() {
     },
     {
       title: 'Portfólio 1.0',
-      description: 'Criei este portfólio para reunir e compartilhar meus projetos, habilidades como desenvolvedor...',
+      description: 'Criei este portfólio para reunir e compartilhar meus projetos e minhas habilidades iniciais como desenvolvedor.',
       image: '/images/portfolio.png',
       link: 'https://lijunio.github.io/portfolio/',
       progress: 100,
@@ -76,7 +76,7 @@ export default function Projects() {
     },
     {
       title: 'Amigo Oculto Natal Família Souza',
-      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família...',
+      description: 'Este projeto foi desenvolvido para organizar e executar o sorteio de amigo oculto entre membros da família de forma prática e personalizada. Ele permite realizar sorteios aleatórios, configurar restrições específicas e oferece uma interface interativa, onde os participantes recebem feedback por meio de um pop-up. Após o sorteio, o sistema gera automaticamente um arquivo de resultado para download, facilitando a distribuição das informações entre os envolvidos. O projeto foi criado para atender a necessidades específicas de sorteio, evitando custos e limitações de outras plataformas disponíveis.',
       image: '/images/natal.png',
       link: 'https://lijunio.github.io/Amigo-Oculto-2023/',
       progress: 100,
