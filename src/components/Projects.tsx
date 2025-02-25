@@ -34,6 +34,14 @@ export default function Projects() {
 
   const projects = [
     {
+      title: 'MWM Estruturas e Montagens',
+      description: 'O site da empresa de Estruturas e Montagens tem como objetivo apresentar seus produtos e serviços especializados, como a fabricação, venda e locação de galpões lonados, pré-moldados, pré-fabricados, industriais, além de tendas para obras e carpas. Ele oferece soluções eficientes, econômicas e sustentáveis para armazenamento, proteção de equipamentos e espaços temporários, destacando as vantagens de suas lonas antiabrasivas com filtro UV e materiais recicláveis.',
+      image: '/images/mwm.jpeg',
+      link: 'https://www.mwm-estruturasemontagem.com.br/',
+      progress: 100,
+      icons: ['/images/icons/react.png', '/images/icons/css.png', '/images/icons/js.png']
+    },
+    {
       title: 'Saneatto Engenharia',
       description: 'O site da Saneatto Engenharia serve como uma plataforma para apresentar a empresa, seus valores e serviços. Ele tem como principal objetivo fornecer informações sobre a atuação da empresa nas áreas de engenharia geotécnica, fechamento de mina, descomissionamento e sustentabilidade. Além disso, o site facilita o contato com potenciais clientes e parceiros, apresentando os canais de comunicação da empresa e destacando seu compromisso com os Objetivos de Desenvolvimento Sustentável (ODS).',
       image: '/images/saneatto.png',
@@ -57,14 +65,6 @@ export default function Projects() {
       link: 'https://lijunio.github.io/bioguard/',
       progress: 100,
       icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/js.png' , '/images/icons/python.png', '/images/icons/nodejs.png' , '/images/icons/mysql.png' ] 
-    },
-    {
-      title: 'Descomplica Consultoria Acadêmica',
-      description: 'Este website de consultoria acadêmica está sendo desenvolvido com o objetivo de proporcionar uma experiência fluida e interativa aos usuários, permitindo que explorem uma variedade de serviços acadêmicos oferecidos. O projeto inclui funcionalidades que permitirão a solicitação de orçamentos por meio de formulários e a conexão direta com o e-mail do consultor. Além disso, está sendo planejada a integração de uma API que conectará diretamente com o WhatsApp do consultor, facilitando a comunicação e a resolução de dúvidas.',
-      image: '/images/descomplica.png',
-      link: 'https://ibb.co/3YVTSVb',
-      progress: 40,
-      icons: ['/images/icons/html5.png', '/images/icons/css.png', '/images/icons/react.png', '/images/icons/php.png'] 
     },
     {
       title: 'Portfólio 1.0',
