@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --white-color: rgb(255, 255, 255);
+  --blue-color: rgb(37, 99, 235);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@layer base {
+  body {
+    font-family: var(--font-family);
+    background: 
+      /* Adiciona a imagem de fundo */
+      url('/images/background.svg') no-repeat center center fixed,
+      /* Mantém o gradiente existente */
+      linear-gradient(180deg, 
+                      #333333 0%, 
+                      #000000 20%, 
+                      #333333 50%, 
+                      #000000 100%);
+    background-size: cover, cover; /* Garante que a imagem e o gradiente cubram toda a área */
+    color: #000000;
+  }
+}
+
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-blue-500 {
+  color: var(--blue-color);
+}
+
+.card {
+  @apply bg-card-bg text-card-foreground;
+}
+
+@keyframes borderEffect {
+  0% {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #333333, #4b5563, #333333);
+  background-size: 200% 200%;
+  animation: gradientBackground 4s ease infinite;
+}
+
+.custom-gradient-bg {
+  background: linear-gradient(135deg, #333333, #4b5563, #333333);
+  background-size: 200% 200%;
+  animation: customGradientBackground 4s ease infinite;
+}
+
+@keyframes customGradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
